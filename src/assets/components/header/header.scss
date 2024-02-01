@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  .banner {
+    background: center top / cover url(/public/images/fake-space-marine.jpg);
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    .fog {
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      object-fit: cover; /* Pour couvrir toute la zone */
+      object-position: center; /* Positionner l'image au centre */
+      z-index: 1; /* Assurez-vous que l'image est au-dessus du fond */
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    .fog {
+    }
+  }
+}
