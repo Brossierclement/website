@@ -11,9 +11,9 @@
       position: absolute;
       width: 100%;
       height: 50%;
-      object-fit: cover; /* Pour couvrir toute la zone */
-      object-position: center; /* Positionner l'image au centre */
-      z-index: 1; /* Assurez-vous que l'image est au-dessus du fond */
+      object-fit: cover;
+      object-position: center;
+      z-index: 1;
     }
   }
 }
