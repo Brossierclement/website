@@ -1,19 +1,33 @@
+import { useState } from "react";
 import "./header/header.scss";
-import { Link } from "react-router-dom";
 function Header() {
+  const [isActive, setIsActive] = useState(false);
+  const handleClick = (event) => {
+    setIsActive((current) => !current);
+  };
   return (
     <header className="header">
-      <div className="header-bar">
-        <Link to={"/"}>
-          <img src="/images/planet.svg" alt="logo du site internet" />
-        </Link>
-        <button className="header-menu">
-          <img src="/images/bars-solid.svg" alt="logo représentant un menu" />
-        </button>
+      <div className="top-bar">
+        <nav className="back-home">
+          <a href="#">Clément Brossier</a>
+        </nav>
+        <div className="navigation">
+          <button className="menu" onClick={handleClick}>
+            <div className="bar-container">
+              <span className="bar bar-one"></span>
+              <span className="bar bar-two"></span>
+              <span className="bar bar-three"></span>
+            </div>
+          </button>
+        </div>
       </div>
-      <div className="banner">
-        <img src="/images/fogg.png" alt="" className="fog" />
-      </div>
+      <nav className={`menu-info ${isActive ? "menu-info-active" : ""}`}>
+        <ul>
+          <li>Accueil</li>
+          <li>À propos</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
     </header>
   );
 }
