@@ -14,9 +14,17 @@ function Header() {
         <div className="navigation">
           <button className="menu" onClick={handleClick}>
             <div className="bar-container">
-              <span className="bar bar-one"></span>
-              <span className="bar bar-two"></span>
-              <span className="bar bar-three"></span>
+              <span
+                className={`bar bar-one ${isActive ? "bar-one-active" : ""}`}
+              ></span>
+              <span
+                className={`bar bar-two ${isActive ? "bar-two-active" : ""}`}
+              ></span>
+              <span
+                className={`bar bar-three ${
+                  isActive ? "bar-three-active" : ""
+                }`}
+              ></span>
             </div>
           </button>
         </div>
