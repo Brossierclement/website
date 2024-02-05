@@ -12,7 +12,10 @@ function Header() {
           <a href="#">Clément Brossier</a>
         </nav>
         <div className="navigation">
-          <button className="menu" onClick={handleClick}>
+          <button
+            className={`menu ${isActive ? "menu-active" : ""}`}
+            onClick={handleClick}
+          >
             <div className="bar-container">
               <span
                 className={`bar bar-one ${isActive ? "bar-one-active" : ""}`}

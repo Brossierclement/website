@@ -1,2 +1,19 @@
+@import "/src/assets/styles/colors.scss";
 .home {
+  font-size: 16px;
+  position: relative;
+  .banner {
+    background: center top / cover url(/public/images/background.jpg);
+    padding: 44px 8px;
+    h1 {
+      color: $high-contrast-text-white;
+      font-size: 2em;
+      text-shadow: 1px 1px 2px $high-contrast-text;
+    }
+    p {
+      color: $high-contrast-text-white;
+      font-size: 1.5em;
+      text-shadow: 1px 1px 2px $high-contrast-text;
+    }
+  }
 }
