@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./header/header.scss";
+import "../header/header.scss";
 function Header() {
   const [isActive, setIsActive] = useState(false);
   const handleClick = (event) => {

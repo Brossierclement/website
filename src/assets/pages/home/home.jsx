@@ -1,6 +1,14 @@
 import "../home/home.scss";
-import Header from "../../components/header";
+import Header from "../../components/header/header";
+import { useContext } from "react";
+import { DataContext } from "../../../App";
 function Home() {
+  const data = useContext(DataContext);
+  const topNetworks = [
+    data.networks.find((obj) => obj.name === "Github"),
+    data.networks.find((obj) => obj.name === "Twitch"),
+  ];
+  console.log(topNetworks);
   return (
     <>
       <Header />
@@ -8,6 +16,17 @@ function Home() {
         <section className="banner">
           <h1>Exploration Créative</h1>
           <p>Partage de Projets et Passions</p>
+          <nav className="banner-networks">
+            {data ? (
+              topNetworks.map((item, i) => (
+                <a className="banner-links" key={i} href={item.url}>
+                  <p>{item.name}</p>
+                </a>
+              ))
+            ) : (
+              <p>Chargement...</p>
+            )}
+          </nav>
         </section>
         <h1>Home</h1>
         <p>
