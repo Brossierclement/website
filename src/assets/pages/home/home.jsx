@@ -8,7 +8,6 @@ function Home() {
     data.networks.find((obj) => obj.name === "Github"),
     data.networks.find((obj) => obj.name === "Twitch"),
   ];
-  console.log(topNetworks);
   return (
     <>
       <Header />
@@ -19,14 +18,26 @@ function Home() {
           <nav className="banner-networks">
             {data ? (
               topNetworks.map((item, i) => (
-                <a className="banner-links" key={i} href={item.url}>
-                  <p>{item.name}</p>
+                <a
+                  className="banner-links"
+                  key={i}
+                  href={item.url}
+                  target="blank"
+                >
+                  <img className="icon" src={item.logo} alt="icone" />
+                  <p className="name">{item.name}</p>
                 </a>
               ))
             ) : (
               <p>Chargement...</p>
             )}
           </nav>
+          <div className="info">
+            <button className="btn-info">
+              <p>Générer par une intelligence artificielle</p>
+              <img src="/images/info.svg" alt="" />
+            </button>
+          </div>
         </section>
         <h1>Home</h1>
         <p>

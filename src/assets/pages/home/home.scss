@@ -1,55 +1,127 @@
 @import "/src/assets/styles/colors.scss";
 .home {
-  font-size: 16px;
   position: relative;
   .banner {
-    background: center top / cover url(/public/images/background.jpg);
+    background: linear-gradient(
+        to top right,
+        rgba($high-contrast-text, 0.7),
+        rgba($low-contrast-text, 0.3)
+      ),
+      center top / cover url(/public/images/background.jpg);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
       rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     display: flex;
     flex-direction: column;
     gap: 1em;
-    height: 45svh;
-    justify-content: center;
-    padding: 44px 8px;
+    height: 35svh;
+    padding: 60px 8px 0px 8px;
+    position: relative;
     h1 {
       color: $high-contrast-text-white;
       font-size: 2em;
       margin: 0;
-      text-shadow: 1px 1px 2px $high-contrast-text;
     }
     p {
       color: $high-contrast-text-white;
-      font-size: 1.5em;
+      font-size: 1em;
       margin: 0;
-      text-shadow: 1px 1px 2px $high-contrast-text;
     }
-  }
-  .banner-networks {
-    .banner-links {
-      color: $high-contrast-text-white;
-      text-decoration: none;
+    .banner-networks {
+      display: flex;
+      gap: 8px;
+      .banner-links {
+        align-items: center;
+        background: $high-contrast-text-white;
+        border: 1px solid $low-contrast-text;
+        border-radius: 2.5px;
+        display: flex;
+        gap: 8px;
+        overflow: hidden;
+        padding: 8px 16px;
+        position: relative;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+        // width: 85px;
+        &::after {
+          background: $hovered-solid-background;
+          border-radius: 75px 150px 0 0;
+          bottom: -100%;
+          content: "";
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 100%;
+          transition: 0.3s ease-in-out;
+        }
+        &:hover::after,
+        &:focus::after {
+          border-radius: 0;
+          transform: translateY(-100%);
+        }
+        &:hover,
+        &:focus {
+          .icon {
+            filter: $high-contrast-text-white-filter;
+          }
+          .name {
+            color: $high-contrast-text-white;
+          }
+        }
+        .icon,
+        .name {
+          transition: 0.3s ease-in-out;
+          z-index: 1;
+        }
+        .icon {
+          height: 25px;
+        }
+        .name {
+          color: $high-contrast-text;
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
     }
-  }
-}
-
-@media (min-width: 425px) {
-  .home {
-    font-size: 20px;
-  }
-}
-@media (min-width: 768px) {
-  .home {
-    font-size: 24px;
-  }
-}
-@media (min-width: 1024px) {
-  .home {
-    font-size: 28px;
-  }
-}
-@media (min-width: 1440px) {
-  .home {
-    font-size: 32px;
+    .info {
+      align-items: center;
+      border: none;
+      bottom: 0;
+      display: flex;
+      justify-content: flex-end;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      .btn-info {
+        align-items: center;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        padding: 0;
+        position: relative;
+        &:hover {
+          p {
+            transform: translate(-95%, -50%);
+          }
+        }
+        p {
+          color: $high-contrast-text-white;
+          font-style: italic;
+          position: absolute;
+          top: 50%;
+          transform: translate(-95%, 150%);
+          transition: 0.2s ease-in-out;
+          width: 250px;
+        }
+        img {
+          filter: $high-contrast-text-white-filter;
+          float: right;
+          padding: 8px 8px 8px 8px;
+          width: 25px;
+          z-index: 2;
+        }
+      }
+    }
   }
 }
