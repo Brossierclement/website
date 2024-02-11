@@ -1,56 +1,26 @@
-@import "../../styles/colors.scss";
+@import "/src/assets/styles/colors.scss";
 .header {
-  height: 100svh;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-  .topbar {
-    display: flex;
-    height: 50px;
-    justify-content: space-between;
-    padding: 0 8px;
-    position: relative;
-    .return-home {
-      background: $app-background;
-      border-radius: 0 0 2.5px 2.5px;
-      padding: 8px;
-    }
-    .navigation-desktop {
-      align-items: center;
-      background: $app-background;
-      border-radius: 0 0 2.5px 2.5px;
-      display: none;
-      gap: 16px;
-      padding: 0 8px;
-      a {
-        color: black;
-        text-decoration: none;
-      }
-    }
-    .btn-navigation {
-      background: $app-background;
-      border: none;
-      border-radius: 0 0 2.5px 2.5px;
-      cursor: pointer;
-      padding: 8px;
+  .navigation-desktop {
+    display: none;
+  }
+  .contaimer-navigation-mobile {
+    .menu {
+      height: 44px;
       position: relative;
-      transition: 0.2s ease-in;
-      width: 50px;
-      z-index: 2;
+      transition: transform 0.5s;
+      width: 44px;
       .bar {
-        background: lightseagreen;
+        background: black;
         display: block;
         height: 2px;
         left: 50%;
         position: absolute;
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
-        transition: 0.2s ease-in;
-        width: 35px;
+        width: 22px;
         &::before,
         &::after {
-          background: black;
+          background: lightseagreen;
           content: "";
           display: block;
           height: 2px;
@@ -58,52 +28,46 @@
           position: absolute;
           top: 0;
           transform: translateY(-6px);
-          transition: 0.2s ease-in;
-          width: 35px;
+          transition: transform 0.5s;
+          width: 22px;
         }
         &::after {
           transform: translateY(6px);
         }
       }
-      .bar.active {
-        background: transparent;
-        &::before {
-          transform: translateY(0) rotate(45deg);
-        }
-        &::after {
-          transform: translateY(0) rotate(-45deg);
+      &:hover {
+        transform: rotate(180deg);
+        .bar {
+          background: transparent;
+          &::before {
+            transform: translateY(0) rotate(45deg);
+          }
+          &::after {
+            transform: translateY(0) rotate(-45deg);
+          }
         }
       }
     }
-  }
-  .navigation-mobile {
-    backdrop-filter: blur(2px);
-    background: rgba($app-background, 0.5);
-    border: 1px solid transparent;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    height: 100svh;
-    left: 0;
-    position: absolute;
-    top: -100%;
-    transition: 0.2s ease-in;
-    width: 100%;
-  }
-  .navigation-mobile.active {
-    top: 0;
   }
 }
 
 @media (min-width: 768px) {
   .header {
-    .topbar {
-      .navigation-desktop {
-        display: flex;
-      }
+    .navigation-desktop {
+      display: none;
     }
-    .btn-navigation,
-    .navigation-mobile {
+    .contaimer-navigation-mobile {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    .navigation-desktop {
+      display: block;
+    }
+    .contaimer-navigation-mobile {
       display: none;
     }
   }
