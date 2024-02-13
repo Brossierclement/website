@@ -11,10 +11,27 @@ function Home() {
   return (
     <>
       <Header />
-      <main className="home">
-        <section className="banner">
-          <img className="bg" src="/images/background.jpg" alt="" />
-        </section>
+      <main id="home" className="home">
+        <div className="banner">
+          <section className="welcome">
+            <h1>L'Antre du Marteau</h1>
+            <p>Partage de Projets et Passions</p>
+            <p className="introduce">
+              "Il s'agit de mon site personnel me permettant de vous partager
+              mes divers projets autour du code ainsi que du design, mais
+              également mes passions généralement retranscrites a travers des
+              vidéos
+              <a
+                href="https://www.youtube.com/channel/UCqr9oNYYGHxnfPVAbNrOqoQ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Youtube
+              </a>
+              ."
+            </p>
+          </section>
+        </div>
         <p style={{ margin: 0 }}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi
           voluptates soluta labore voluptatum id, quam ab officiis fugiat iure
@@ -189,6 +206,7 @@ function Home() {
           Minus exercitationem voluptatibus est aperiam aut consequuntur
           reiciendis nam, beatae recusandae, quasi totam!
         </p>
+        <h1 id="projects">Projets</h1>
       </main>
     </>
   );
