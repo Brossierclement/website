@@ -5,9 +5,9 @@
   .banner {
     background: top center / cover url(/public/images/background.jpg);
     display: flex;
-    height: 100svh;
+    height: calc(100svh - 50px);
     justify-content: center;
-    padding: 50px 0;
+    padding-top: 50px;
     z-index: 0;
     width: 100%;
     .welcome {
