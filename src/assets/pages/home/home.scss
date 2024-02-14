@@ -2,34 +2,22 @@
 .home {
   font-size: 8px;
   margin: 0 auto;
-  position: relative;
   .banner {
     background: top center / cover url(/public/images/background.jpg);
     display: flex;
     height: 100svh;
     justify-content: center;
-    position: relative;
+    padding: 50px 0;
     z-index: 0;
     width: 100%;
-    &::before {
-      background: rgba($high-contrast-text, 0.65);
-      content: "";
-      inset: 0;
-      position: absolute;
-    }
     .welcome {
       align-items: center;
       color: $high-contrast-text-white;
       display: flex;
       flex-direction: column;
-      font-size: 2em;
-      margin: 0 auto;
+      font-size: calc(12px + 1vh);
       max-width: 1024px;
-      padding: 16px;
-      position: absolute;
       text-shadow: 2px 2px 5px $high-contrast-text;
-      top: 25%;
-      z-index: 1;
       h1 {
         font-size: 1.75em;
       }
