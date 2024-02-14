@@ -8,7 +8,7 @@ function Header() {
   return (
     <header className="header">
       <div className="topbar">
-        <img src="/images/donjon.svg" alt="logo du site" className="logo" />
+        <img src="/images/dungeon.svg" alt="logo du site" className="logo" />
         <nav className="navigation-desktop">
           <a href="#home">Accueil</a>
           <a href="#projects">Projets</a>

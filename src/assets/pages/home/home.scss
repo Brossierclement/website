@@ -1,11 +1,13 @@
 @import "/src/assets/styles/colors.scss";
 .home {
+  font-size: 8px;
   margin: 0 auto;
-  max-width: 1440px;
   position: relative;
   .banner {
     background: top center / cover url(/public/images/background.jpg);
+    display: flex;
     height: 100svh;
+    justify-content: center;
     position: relative;
     z-index: 0;
     width: 100%;
@@ -15,36 +17,185 @@
       inset: 0;
       position: absolute;
     }
-    &::after {
-      border: 1px solid white;
-      content: "";
-      inset: 58px 8px 8px 8px;
-      position: absolute;
-    }
     .welcome {
+      align-items: center;
       color: $high-contrast-text-white;
-      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      font-size: 2em;
+      margin: 0 auto;
+      max-width: 1024px;
       padding: 16px;
       position: absolute;
+      text-shadow: 2px 2px 5px $high-contrast-text;
       top: 25%;
       z-index: 1;
+      h1 {
+        font-size: 1.75em;
+      }
       .introduce {
         font-style: italic;
+        text-align: center;
         a {
           color: inherit;
           font-weight: 500;
           position: relative;
           text-decoration: none;
-          &::before {
+          &::after {
             background: $solid-background;
             bottom: -2px;
             content: "";
-            height: 2px;
+            height: 1px;
+            left: 0;
             position: absolute;
+            transition: width 0.2s ease-in-out;
+            width: 50%;
+          }
+          &:hover::after {
+            right: 0;
             width: 100%;
           }
         }
       }
+      .more {
+        color: inherit;
+        position: relative;
+        text-decoration: none;
+        &::after {
+          background: $high-contrast-text-white;
+          bottom: -2px;
+          content: "";
+          height: 1px;
+          left: 0;
+          position: absolute;
+          transition: width 0.2s ease-in-out;
+          width: 50%;
+        }
+        &:hover::after {
+          right: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .title {
+    animation: gradient 15s ease infinite;
+    background: linear-gradient(
+      -45deg,
+      $low-contrast-text,
+      $low-contrast-text-color,
+      black
+    );
+    background-size: 400% 400%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    color: $high-contrast-text-white;
+    font-size: 2em;
+    margin: 0;
+    padding: 32px 0;
+    scroll-margin-top: 50px;
+    text-align: center;
+  }
+  .projects {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    padding: 8px;
+    .project {
+      border-radius: 0 0 5px 5px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      position: relative;
+      .logo {
+        width: 100%;
+      }
+      .project-description {
+        background: $subtle-background;
+        border-radius: 0 0 5px 5px;
+        bottom: 0;
+        left: 0;
+        padding: 8px;
+        position: absolute;
+        right: 0;
+        .project-name {
+          font-size: 2em;
+        }
+        .project-title {
+          font-size: 1.2em;
+        }
+      }
+    }
+    .project-github {
+      align-items: center;
+      background: $high-contrast-text-color;
+      border-radius: 0 0 5px 5px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      &::after {
+        background: $low-contrast-text-color;
+        border-radius: 500px 300px 0 0;
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        transition: 0.3s ease-in-out;
+      }
+      &:hover::after {
+        border-radius: 0;
+        top: 0;
+      }
+      .plus {
+        z-index: 1;
+        filter: $high-contrast-text-white-filter;
+        height: 50%;
+      }
+    }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (min-width: 425px) {
+  .home {
+    font-size: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .home {
+    font-size: 12px;
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .home {
+    font-size: 14px;
+    .title {
+      font-size: 3em;
+      padding: 64px 0;
+    }
+  }
+}
+@media (min-width: 1440px) {
+  .home {
+    .projects {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr 1fr;
     }
   }
 }

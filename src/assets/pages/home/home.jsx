@@ -4,10 +4,7 @@ import { useContext } from "react";
 import { DataContext } from "../../../App";
 function Home() {
   const data = useContext(DataContext);
-  const topNetworks = [
-    data.networks.find((obj) => obj.name === "Github"),
-    data.networks.find((obj) => obj.name === "Twitch"),
-  ];
+  console.log(data.projects);
   return (
     <>
       <Header />
@@ -20,19 +17,42 @@ function Home() {
               "Il s'agit de mon site personnel me permettant de vous partager
               mes divers projets autour du code ainsi que du design, mais
               également mes passions généralement retranscrites a travers des
-              vidéos
+              vidéos{" "}
               <a
                 href="https://www.youtube.com/channel/UCqr9oNYYGHxnfPVAbNrOqoQ"
                 target="_blank"
-                rel="noopener noreferrer"
               >
                 Youtube
               </a>
               ."
             </p>
+            <a className="more" href="#">
+              plus...
+            </a>
           </section>
         </div>
-        <p style={{ margin: 0 }}>
+        <h1 id="projects" className="title">
+          Projets & Conceptions
+        </h1>
+        <div className="projects">
+          {data ? (
+            data.projects.map((item) => (
+              <div key={item.id} className="project">
+                <img className="logo" src={item.logo} alt="" />
+                <section className="project-description">
+                  <h2 className="project-name">{item.name}</h2>
+                  <p className="project-title">{item.title}</p>
+                </section>
+              </div>
+            ))
+          ) : (
+            <p>Chargement...</p>
+          )}
+          <a className="project-github" href="" target="_blank">
+            <img className="plus" src="/images/mdi--github.svg" alt="" />
+          </a>
+        </div>
+        <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi
           voluptates soluta labore voluptatum id, quam ab officiis fugiat iure
           sequi esse qui maxime enim, obcaecati numquam magnam? Nemo, optio
@@ -206,7 +226,6 @@ function Home() {
           Minus exercitationem voluptatibus est aperiam aut consequuntur
           reiciendis nam, beatae recusandae, quasi totam!
         </p>
-        <h1 id="projects">Projets</h1>
       </main>
     </>
   );
