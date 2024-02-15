@@ -5,7 +5,7 @@
   z-index: 1;
   .topbar {
     align-items: center;
-    background: rgba($app-background, 0.9);
+    background: rgba(white, 0.9);
     backdrop-filter: blur(2px);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     display: flex;
@@ -49,7 +49,7 @@
           width: 33px;
           &::before,
           &::after {
-            background: $solid-background;
+            background: green;
             content: "";
             display: block;
             height: 2px;
@@ -80,7 +80,7 @@
     }
   }
   .navigation-mobile {
-    background: $ui-element-background;
+    background: rgba(green, 0.8);
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -94,7 +94,7 @@
     transition: left 0.2s ease-in-out;
     z-index: 0;
     a {
-      color: $high-contrast-text;
+      color: white;
       font-size: 1.5em;
       text-decoration: none;
     }

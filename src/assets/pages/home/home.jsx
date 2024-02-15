@@ -10,7 +10,7 @@ function Home() {
       <Header />
       <main id="home" className="home">
         <div className="banner">
-          <section className="welcome">
+          <section className="banner-introduce">
             <h1>L'Antre du Marteau</h1>
             <p>Partage de Projets et Passions</p>
             <p className="introduce">
@@ -31,26 +31,41 @@ function Home() {
             </a>
           </section>
         </div>
-        <h1 id="projects" className="title">
-          Projets & Conceptions
-        </h1>
-        <div className="projects">
-          {data ? (
-            data.projects.map((item) => (
-              <div key={item.id} className="project">
-                <img className="logo" src={item.logo} alt="" />
-                <section className="project-description">
-                  <h2 className="project-name">{item.name}</h2>
-                  <p className="project-title">{item.title}</p>
-                </section>
-              </div>
-            ))
-          ) : (
-            <p>Chargement...</p>
-          )}
-          <a className="project-github" href="" target="_blank">
-            <img className="plus" src="/images/mdi--github.svg" alt="" />
-          </a>
+        <div className="projects-container">
+          <div className="projects">
+            {data ? (
+              data.projects.map((item) => (
+                <div key={item.id} className="project">
+                  <img className="logo" src={item.logo} alt="" />
+                  <section className="project-description">
+                    <h2 className="project-name">{item.name}</h2>
+                    <p className="project-title">{item.title}</p>
+                  </section>
+                </div>
+              ))
+            ) : (
+              <p>Chargement...</p>
+            )}
+          </div>
+          <div className="projects-informations">
+            <div className="projects-introduce">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deleniti laborum excepturi repellendus nesciunt doloribus illo
+                mollitia facilis reiciendis. Nemo ab autem dolore aspernatur
+                molestias minus repudiandae, sunt eum consectetur praesentium.
+              </p>
+            </div>
+            <div className="projects-more">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Similique doloremque dignissimos ullam ea laboriosam est iusto
+                aspernatur totam? Facere pariatur explicabo eligendi odio
+                voluptatum nobis neque voluptate. Veritatis, sed incidunt?
+              </p>
+            </div>
+            <img className="me" src="/images/me-nice-cute.png" alt="" />
+          </div>
         </div>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi
