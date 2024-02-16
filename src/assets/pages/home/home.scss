@@ -1,151 +1,26 @@
 @import "/src/assets/styles/colors.scss";
 .home {
-  font-size: 8px;
   margin: 0 auto;
-  .banner {
-    align-items: center;
-    // background: top center / cover url(/public/images/background.jpg);
-    background: rgba(black, 0.8);
-    display: flex;
-    height: calc(100svh - 50px);
-    justify-content: center;
-    padding-top: 50px;
-    position: relative;
-    width: 100%;
-    &::after {
-      background: rgba(black, 0.4);
-      content: "";
-      inset: 0;
-      position: absolute;
-      z-index: -1;
-    }
-    .banner-introduce {
-      align-items: center;
-      color: $high-contrast-text-white;
-      display: flex;
-      flex-direction: column;
-      font-size: calc(12px + 1vh);
-      gap: 16px;
-      max-width: 768px;
-      padding: 0 8px;
-      text-align: center;
-      text-shadow: 2px 2px 5px $high-contrast-text;
-      h1 {
-        font-size: 2em;
-        margin: 0;
-      }
-      p {
-        font-size: 1em;
-        margin: 0;
-      }
-      .introduce {
-        font-style: italic;
-        a {
-          color: inherit;
-          font-weight: 500;
-          position: relative;
-          text-decoration: none;
-        }
-      }
-      .more {
-        color: inherit;
-        position: relative;
-        text-decoration: none;
-      }
-    }
+  max-width: 1024px;
+  padding: 50px 8px 0 8px;
+  .section {
+    scroll-margin-top: 68px;
   }
-  .title {
-    font-size: 3em;
-    margin: 0;
-    padding: 16px 0;
-    scroll-margin-top: 58px;
-  }
-  .projects-container {
+  .welcome {
     display: grid;
-    margin: 0 auto;
-    max-width: 1440px;
-    .projects {
-      display: grid;
-      gap: 8px;
-      padding: 8px;
-      .project {
-        border-radius: 0 0 5px 5px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-        max-height: 250px;
-        overflow: hidden;
-        position: relative;
-        .logo {
-          border-radius: 5px 5px 0 0;
-          width: 100%;
-        }
-        .project-description {
-          background: $subtle-background;
-          border-radius: 0 0 5px 5px;
-          bottom: 0;
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-          left: 0;
-          padding: 8px;
-          position: absolute;
-          right: 0;
-          h2,
-          p {
-            margin: 0;
-          }
-        }
-      }
+    text-align: center;
+    .introduce-welcome {
     }
-    .projects-informations {
-      // background: lightseagreen;
-      display: grid;
-      grid-template-areas:
-        "a a"
-        "b c";
-      .projects-introduce {
-        background: lightsalmon;
-        grid-area: a;
-      }
-      .projects-more {
-        background: lemonchiffon;
-        grid-area: c;
-      }
-      .me {
-        background: lightpink;
-        grid-area: b;
-        height: 100%;
-        object-fit: cover;
-        width: 100%;
-      }
+    .computer {
+      width: 100%;
     }
   }
 }
-@media (min-width: 425px) {
-  .home {
-    font-size: 10px;
-    .projects-container {
-      .projects {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  }
-}
+
 @media (min-width: 768px) {
   .home {
-    font-size: 10px;
-    .projects-container {
+    .welcome {
       grid-template-columns: repeat(2, 1fr);
-      .projects {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  }
-}
-@media (min-width: 1024px) {
-  .home {
-    font-size: 10px;
-    .projects-container {
     }
   }
 }

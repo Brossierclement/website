@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "../header/header.scss";
 function Header() {
   const [isActive, setIsActive] = useState(false);
@@ -7,32 +8,34 @@ function Header() {
   };
   return (
     <header className="header">
-      <div className="topbar">
-        <img src="/images/dungeon.svg" alt="logo du site" className="logo" />
-        <nav className="navigation-desktop">
+      <nav className="nav-header">
+        <Link className="home-return" to={"/"}>
+          L'Antre du Marteau
+        </Link>
+        <button
+          className={`btn-nav-header ${
+            isActive ? "btn-nav-header-active" : ""
+          }`}
+          onClick={handleClick}
+        >
+          <span className="central-bar"></span>
+        </button>
+        <nav className="nav-menu-header-desktop">
           <a href="#home">Accueil</a>
           <a href="#projects">Projets</a>
-          <a href="#">À propos</a>
-          <a href="#">Contact</a>
+          <a href="#about">À propos</a>
+          <a href="#contact">Contact</a>
         </nav>
-        <div className="contaimer-navigation-mobile">
-          <button
-            className={`menu ${isActive ? "menu-active" : ""}`}
-            onClick={handleClick}
-          >
-            <span className="bar"></span>
-          </button>
-        </div>
-      </div>
+      </nav>
       <nav
-        className={`navigation-mobile ${
-          isActive ? "navigation-mobile-active" : ""
+        className={`nav-menu-header ${
+          isActive ? "nav-menu-header-active" : ""
         }`}
       >
-        <a href="#home">Acceuil</a>
+        <a href="#home">Accueil</a>
         <a href="#projects">Projets</a>
-        <a href="#">À propos</a>
-        <a href="#">Contact</a>
+        <a href="#about">À propos</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
   );
