@@ -1,5 +1,6 @@
 import "../home/home.scss";
 import Header from "../../components/header/header";
+import Network from "../../components/network/network";
 import Footer from "../../components/footer/footer";
 import { useContext } from "react";
 import { DataContext } from "../../../App";
@@ -19,8 +20,20 @@ function Home() {
                 mais également mes activités personnelles comme la création de
                 contenus sur Youtube.
               </p>
+              <nav className="links-welcome">
+                <Network
+                  url={"https://github.com/Brossierclement"}
+                  name={"Github"}
+                />
+                <Network
+                  url={"https://www.youtube.com/@Gulnyr_"}
+                  name={"Youtube"}
+                />
+              </nav>
             </section>
-            <img className="computer" src="/images/computer.png" alt="" />
+            <div className="image-welcome">
+              <img className="computer" src="/images/computer.png" alt="" />
+            </div>
           </div>
           <h1>Projets</h1>
           <p>
