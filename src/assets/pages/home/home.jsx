@@ -11,7 +11,7 @@ function Home() {
     <>
       <Header />
       <main id="home" className="home">
-        <section id="projects" className="section">
+        <section>
           <div className="welcome">
             <section className="introduce-welcome">
               <h1>Bievenue sur l'Antre du Marteau</h1>
@@ -35,6 +35,8 @@ function Home() {
               <img className="computer" src="/images/computer.png" alt="" />
             </div>
           </div>
+        </section>
+        <section id="projects" className="section">
           <h1>Projets</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
