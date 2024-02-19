@@ -1,7 +1,33 @@
 .network {
-  background: #101211;
-  border-radius: 5px;
+  background: #46a758;
+  border-radius: 2.5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   color: #eceeed;
+  overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-decoration: none;
+  z-index: 1;
+  &::after {
+    background: #101211;
+    border-radius: 0 150px 0 0;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 100%;
+    transition: 0.2s;
+    width: 0;
+    z-index: -1;
+  }
+  &:hover::after {
+    border-radius: 0;
+    top: 0;
+    width: 100%;
+  }
+  p {
+    font-weight: 500;
+    text-transform: uppercase;
+    z-index: 1;
+  }
 }

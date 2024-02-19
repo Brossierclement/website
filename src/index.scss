@@ -1,7 +1,24 @@
 @import "/src/assets/styles/colors.scss";
 :root {
+  background: #fcfcfc;
   font-family: "Montserrat", sans-serif;
   line-height: 1;
+  font-size: 8px;
   font-weight: 400;
   scroll-behavior: smooth;
+  h1 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    font-size: 10px;
+  }
 }

@@ -1,0 +1,15 @@
+.card {
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  overflow: hidden;
+  text-decoration: none;
+  .card-logo {
+    display: block;
+    width: 100%;
+  }
+  .card-infos {
+    background: #fcfcfc;
+    color: #101211;
+    padding: 0 8px;
+  }
+}
