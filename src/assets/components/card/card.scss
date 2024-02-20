@@ -10,6 +10,29 @@
   .card-infos {
     background: #fcfcfc;
     color: #101211;
-    padding: 0 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+    h3,
+    p {
+      margin: 0;
+    }
+    .card-top {
+      display: flex;
+      gap: 8px;
+      justify-content: space-between;
+    }
+    .card-types {
+      align-items: center;
+      display: flex;
+      gap: 8px;
+      .type {
+        background: #717d79;
+        border-radius: 2.5px;
+        color: #fcfcfc;
+        padding: 4px 6px;
+      }
+    }
   }
 }

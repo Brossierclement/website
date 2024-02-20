@@ -36,19 +36,22 @@
             "id": 1,
             "name": "Argent Bank",
             "logo": "/images/projects/bank.jpg",
-            "title": "Application de gestion bancaire."
+            "title": "Application de gestion bancaire.",
+            "types": ["React", "Redux"]
         },
         {
             "id": 2,
             "name": "Kasa",
             "logo": "/images/projects/kasa.jpg",
-            "title": "Application de réservation en ligne."
+            "title": "Application de réservation en ligne.",
+            "types": ["React"]
         },
         {
             "id": 3,
             "name": "Sophie Bluel",
             "logo": "/images/projects/sophie.jpg",
-            "title": "Site vitrine d'une photographe"
+            "title": "Site vitrine d'une photographe",
+            "types": ["Js"]
         }
     ]
 }
