@@ -1,0 +1,15 @@
+.project {
+  background: #202221;
+  bottom: -100%;
+  left: 0;
+  position: fixed;
+  transition: 0.2s;
+  width: 100%;
+  h1 {
+    color: #eeeeee;
+  }
+}
+.active {
+  bottom: 0;
+  top: 0;
+}

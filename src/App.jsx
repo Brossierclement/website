@@ -2,6 +2,7 @@ import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./assets/pages/home/home";
 import { createContext, useEffect, useState } from "react";
+import Project from "./assets/components/project/project";
 
 export const DataContext = createContext();
 

@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import "../network/network.scss";
 function Network({ url, name }) {
   return (
-    <a className="network" href={url} target="_blank">
+    <Link className="link" to={url} target="_blank">
       <p>{name}</p>
-    </a>
+    </Link>
   );
 }
 export default Network;

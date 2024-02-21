@@ -3,107 +3,47 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin: 0 auto;
-  max-width: 1024px;
-  padding: 66px 8px 0 8px;
-  .section {
-    scroll-margin-top: 50px;
+  padding: 32px 16px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #eeeeee;
+    margin: 0;
   }
-  .welcome {
-    display: grid;
-    text-align: center;
-    h1,
+  p {
+    color: #b4b4b4;
+    margin: 0;
+  }
+  .introduce {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    h1 {
+      font-size: clamp(24px, calc(14.4px + 2vw), 40px);
+    }
     p {
-      margin: 0;
-    }
-    .introduce-welcome {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      justify-content: center;
-      margin: 0 auto;
-      max-width: 515px;
-      .links-welcome {
-        display: flex;
-        gap: 8px;
-        justify-content: center;
-      }
-    }
-    .image-welcome {
-      margin: 0 auto;
-      max-height: 515px;
-      max-width: 515px;
-      position: relative;
-      &::before {
-        animation: morphing 10s infinite;
-        background: linear-gradient(19deg, #46a758 0%, #a8d4b0 100%);
-        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-        box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
-        content: "";
-        inset: 24px;
-        position: absolute;
-      }
-      .computer {
-        height: 100%;
-        object-fit: contain;
-        position: relative;
-        width: 100%;
-      }
+      font-size: clamp(24px, calc(14.4px + 1vw), 40px);
     }
   }
-  .content-projects {
+  .network {
+    display: flex;
+    gap: 8px;
+  }
+  .projects {
     display: grid;
+    gap: 16px;
     grid-template-columns: 1fr;
-    margin: 0 auto;
-    max-width: 400px;
-    .projects-infos {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-    }
-    .projects-cards {
-      display: grid;
-      gap: 16px;
-    }
-  }
-}
-
-@keyframes morphing {
-  0% {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% box-shadow 15px 15px 50px
-      rgba(0, 0, 0, 0.2);
-  }
-  25% {
-    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
-  }
-  50% {
-    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45% box-shadow -10px -5px 50px
-      rgba(0, 0, 0, 0.2);
-  }
-  75% {
-    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+    margin-top: 64px;
   }
 }
 
 @media (min-width: 768px) {
   .home {
-    .welcome {
-      grid-template-columns: repeat(2, 1fr);
+    .projects {
+      grid-template-columns: 1fr 1fr;
     }
-    .content-projects {
-      gap: 16px;
-      max-width: none;
-      .projects-infos {
-        justify-content: center;
-      }
-      .projects-cards {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-  }
-}
-
-@media (min-width: 1440px) {
-  .home {
   }
 }
