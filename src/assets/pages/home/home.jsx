@@ -9,10 +9,12 @@ import Project from "../../components/project/project";
 function Home() {
   const data = useContext(DataContext);
   const [isActive, setIsActive] = useState(false);
+  const [idValue, setIdValue] = useState(null);
+  console.log(idValue);
   return (
     <>
-      <Header />
-      <main id="home" className="home">
+      <Header isActive={isActive} />
+      <main id="home" className={`home ${isActive ? "home-active" : ""}`}>
         <section className="introduce">
           <h1>Hey, c'est Clément</h1>
           <p>
@@ -37,16 +39,21 @@ function Home() {
               <Card
                 key={item.id}
                 data={item}
-                isActive={isActive}
                 setIsActive={setIsActive}
+                setIdValue={setIdValue}
               />
             ))
           ) : (
             <p>Erreur...</p>
           )}
         </div>
-        <Project isActive={isActive} setIsActive={setIsActive} />
       </main>
+      <Project
+        isActive={isActive}
+        setIsActive={setIsActive}
+        data={data}
+        idValue={idValue}
+      />
       <Footer />
     </>
   );

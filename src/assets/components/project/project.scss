@@ -1,10 +1,18 @@
 .project {
   background: #202221;
+  border: 2px solid #373b39;
+  border-radius: 24px 24px 0 0;
   bottom: -100%;
+  box-sizing: border-box;
   left: 0;
+  margin: 64px auto 0 auto;
+  max-width: 1024px;
+  overflow: auto;
+  padding: 8px;
   position: fixed;
-  transition: 0.2s;
-  width: 100%;
+  right: 0;
+  top: 100%;
+  transition: 0.5s;
   h1 {
     color: #eeeeee;
   }
@@ -12,4 +20,5 @@
 .active {
   bottom: 0;
   top: 0;
+  transition: 0.5s;
 }

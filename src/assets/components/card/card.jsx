@@ -1,7 +1,8 @@
 import "../card/card.scss";
-function Card({ data, isActive, setIsActive }) {
+function Card({ data, setIsActive, setIdValue }) {
   const handClick = () => {
     setIsActive((current) => !current);
+    setIdValue(data.id);
   };
   return (
     <article className="card">
