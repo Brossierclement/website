@@ -1,20 +1,78 @@
-.project {
+.project-container {
   background: #202221;
   border: 2px solid #373b39;
-  border-radius: 24px 24px 0 0;
+  border-radius: 12px 12px 0 0;
   bottom: -100%;
   box-sizing: border-box;
   left: 0;
   margin: 64px auto 0 auto;
   max-width: 1024px;
   overflow: auto;
-  padding: 8px;
+  padding: 16px;
   position: fixed;
   right: 0;
   top: 100%;
   transition: 0.5s;
-  h1 {
-    color: #eeeeee;
+  .project {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    .header-project {
+      align-items: flex-start;
+      display: flex;
+      justify-content: space-between;
+      .card {
+        .card-infos {
+          .info {
+            p {
+              -webkit-line-clamp: 5;
+            }
+          }
+          .show {
+            display: none;
+          }
+        }
+      }
+    }
+    .main-project {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      .tech {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        h5 {
+          font-size: clamp(18px, 10.8px + 0.25vw, 14px);
+          font-weight: 400;
+        }
+        .languages {
+          display: flex;
+          gap: 8px;
+          .type {
+            background: #444947;
+            border-radius: 2.5px;
+            color: #eeeeee;
+            padding: 8px 16px;
+          }
+        }
+      }
+    }
+    .close {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      position: absolute;
+      right: 0;
+      top: 0;
+      .cross {
+        color: #eeeeee;
+        height: 1em;
+        width: 1em;
+      }
+    }
   }
 }
 .active {

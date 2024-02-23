@@ -10,7 +10,6 @@ function Home() {
   const data = useContext(DataContext);
   const [isActive, setIsActive] = useState(false);
   const [idValue, setIdValue] = useState(null);
-  console.log(idValue);
   return (
     <>
       <Header isActive={isActive} />
