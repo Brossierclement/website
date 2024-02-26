@@ -6,10 +6,23 @@ function Carousel({ data }) {
     setCurrentSlide(currentSlide === data.length - 1 ? 0 : currentSlide + 1);
   const prev = () =>
     setCurrentSlide(currentSlide === 0 ? data.length - 1 : currentSlide - 1);
-  console.log(currentSlide);
+  console.log(data);
   return (
     <div className="carousel">
-      <img className={`carousel-image`} src={`${data[currentSlide]}`} alt="" />
+      {data ? (
+        data.map((item, i) => (
+          <img
+            key={i}
+            className={`carousel-image ${
+              currentSlide === i ? "image-active" : ""
+            }`}
+            src={item}
+            alt=""
+          />
+        ))
+      ) : (
+        <p>Chargement...</p>
+      )}
       <div className="chevrons">
         <button onClick={prev} className="chevron-left">
           <svg

@@ -1,15 +1,19 @@
 @import "/src/assets/styles/colors.scss";
 .carousel {
-  background: #444947;
-  border-radius: 14px;
-  display: flex;
-  justify-content: center;
-  margin: auto;
+  aspect-ratio: 16/9;
+  border-radius: 4px;
+  overflow: hidden;
   position: relative;
   .carousel-image {
-    aspect-ratio: 16/9;
     border-radius: 6px;
+    height: 100%;
+    left: 100%;
+    position: absolute;
+    transition: 0.5s ease-in-out;
     width: 100%;
+  }
+  .image-active {
+    inset: 0;
   }
   .chevrons {
     align-items: center;
