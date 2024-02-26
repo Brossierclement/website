@@ -32,10 +32,8 @@
     display: grid;
     gap: 8px;
     .about-img-tech {
-      display: grid;
-      gap: 8px;
       .about-image {
-        // height: 100%;
+        display: block;
         object-fit: cover;
         width: 100%;
       }
@@ -43,6 +41,7 @@
         display: grid;
         gap: 8px;
         grid-template-columns: repeat(2, 1fr);
+        margin-top: 8px;
         order: 2;
         .ability {
           align-items: center;
