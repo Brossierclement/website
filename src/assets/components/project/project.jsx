@@ -1,6 +1,7 @@
 import "../project/project.scss";
 import Card from "../card/card";
 import Carousel from "../carousel/carousel";
+import Network from "../network/network";
 function Project({ isActive, setIsActive, data, idValue }) {
   const handleClick = () => {
     setIsActive(!isActive);
@@ -29,6 +30,14 @@ function Project({ isActive, setIsActive, data, idValue }) {
               </div>
             </section>
             <Carousel data={found.images} />
+            <p className="description">{found.description}</p>
+            <div className="acces">
+              <Network name={"Visiter"} url={""} />
+              <Network
+                name={"Github"}
+                url={"https://github.com/Brossierclement/projet-11-argentbank"}
+              />
+            </div>
           </main>
           <button className="close" onClick={handleClick}>
             <svg

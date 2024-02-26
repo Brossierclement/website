@@ -1,2 +1,9 @@
 .footer {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  p {
+    font-size: clamp(0.5rem, 0.3929rem + 0.5357vw, 0.875rem);
+  }
 }

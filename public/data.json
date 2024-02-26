@@ -38,7 +38,8 @@
             "logo": "/images/projects/bank.jpg",
             "title": "Front-end d'une application bancaire pour permettre aux utilisateurs de gérer leurs transactions.",
             "types": ["React", "Redux"],
-            "images": ["/images/projects/ab1.png", "/images/projects/ab2.png", "/images/projects/ab3.png"]
+            "images": ["/images/projects/ab1.png", "/images/projects/ab2.png", "/images/projects/ab3.png"],
+            "description": "Argent Bank est une société fictive crée par Openclassrooms dans le cadre d'un projet consistant a implémenter un front-end via React, mais également dans l'objectif d'utiliser redux."
         },
         {
             "id": 2,
@@ -46,7 +47,8 @@
             "logo": "/images/projects/kasa.jpg",
             "title": "Application immobilière permettant aux utilisateur de consulter les diverses offres, leurs caractéristiques et leur évaluation.",
             "types": ["React"],
-            "images": ["/images/projects/ab1.png", "/images/projects/ab2.png", "/images/projects/ab3.png"]
+            "images": ["/images/projects/ab1.png", "/images/projects/ab2.png", "/images/projects/ab3.png"],
+            "description": "Kasa est une société fictive crée par Openclassrooms dans le cadre d'un projet consitant a implémenter un front-end en utilisant React. Il s'agit là de mon tout premier project React."
         },
         {
             "id": 3,
@@ -54,7 +56,20 @@
             "logo": "/images/projects/sophie.jpg",
             "title": "Site vitrine de la photographe Sophie Bluel, lui permettant d'exposer, d'ajouter et supprimer les clichés qu'elle souhaite partager.",
             "types": ["Js"],
-            "images": ["/images/projects/ab1.png", "/images/projects/ab2.png", "/images/projects/ab3.png"]
+            "images": ["/images/projects/ab1.png", "/images/projects/ab2.png", "/images/projects/ab3.png"],
+            "description": "Il s'agit d'un site fictif d'une photographe crée dans le cadre d'un projet consistant a implémenter le front-end en utilisant Javascript. Il s'agit là de mon premier projet Javascript."
+        }
+    ],
+    "ability": [
+        {
+            "id": 1,
+            "tech": ["/images/mdi--javascript.svg", "/images/akar-icons--react-fill.svg"],
+            "named": "Mes capacités :"
+        },
+        {
+            "id": 2,
+            "tech": ["/images/icons8-figma.svg"],
+            "named": "Ce que j'apprends :"
         }
     ]
 }

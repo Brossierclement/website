@@ -2,7 +2,7 @@
 .home {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
   overflow: hidden;
   padding: 32px 16px;
   transition: 0.7s;
@@ -28,15 +28,71 @@
     grid-template-columns: 1fr;
     margin-top: 64px;
   }
+  .about {
+    display: grid;
+    gap: 8px;
+    .about-img-tech {
+      display: grid;
+      gap: 8px;
+      .about-image {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+      .tech {
+        display: grid;
+        gap: 8px;
+        grid-template-columns: repeat(2, 1fr);
+        order: 2;
+        .ability {
+          align-items: center;
+          background: #191919;
+          border-radius: 2px;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          padding: 8px;
+          .ability-title {
+            font-size: clamp(0.75rem, 0.6429rem + 0.5357vw, 1.125rem);
+          }
+          .ability-images-container {
+            display: flex;
+            flex-grow: 1;
+            .ability-image {
+              filter: invert(96%) sepia(46%) saturate(6167%) hue-rotate(183deg)
+                brightness(123%) contrast(87%);
+              width: calc(20px + 1vw);
+            }
+          }
+        }
+      }
+    }
+    .about-me {
+      font-size: clamp(0.75rem, 0.6429rem + 0.5357vw, 1.125rem);
+    }
+  }
 }
 .home-active {
   filter: blur(2px);
 }
 
+@media (min-width: 425px) {
+  .home {
+    .tech {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
 @media (min-width: 768px) {
   .home {
     .projects {
       grid-template-columns: 1fr 1fr;
+    }
+    .about {
+      grid-template-columns: repeat(2, 1fr);
+      .about-image {
+        order: 2;
+      }
     }
   }
 }

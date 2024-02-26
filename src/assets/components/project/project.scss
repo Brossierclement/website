@@ -7,7 +7,7 @@
   left: 0;
   margin: 64px auto 0 auto;
   max-width: 1024px;
-  overflow: hidden;
+  overflow: auto;
   padding: 16px;
   position: fixed;
   right: 0;
@@ -51,12 +51,19 @@
           display: flex;
           gap: 8px;
           .type {
-            background: #444947;
+            border: 1px solid #444947;
             border-radius: 2.5px;
             color: #eeeeee;
             padding: 8px 16px;
           }
         }
+      }
+      .description {
+        font-size: clamp(0.75rem, 0.6429rem + 0.5357vw, 1.125rem);
+      }
+      .acces {
+        display: flex;
+        gap: 8px;
       }
     }
     .close {
@@ -94,4 +101,16 @@
 ::-webkit-scrollbar-thumb {
   background: #46a758;
   border-radius: 0 10px 10px 0;
+}
+
+@media (min-width: 768px) {
+  .project-container {
+    .project {
+      .main-project {
+        .description {
+          max-width: 70%;
+        }
+      }
+    }
+  }
 }

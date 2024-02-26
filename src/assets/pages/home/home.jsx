@@ -46,6 +46,56 @@ function Home() {
             <p>Erreur...</p>
           )}
         </div>
+        <div className="about">
+          <div className="about-img-tech">
+            <img
+              className="about-image"
+              src="/images/space-marine.jpg"
+              alt="image générer par ia représentant deux space marine."
+            />
+            <div className="tech">
+              {data
+                ? data.ability.map((item) => (
+                    <div key={item.id} className="ability">
+                      <p className="ability-title">{item.named}</p>
+                      <div className="ability-images-container">
+                        {item
+                          ? item.tech.map((el, i) => (
+                              <img
+                                key={i}
+                                className="ability-image"
+                                src={el}
+                                alt=""
+                              />
+                            ))
+                          : ""}
+                      </div>
+                    </div>
+                  ))
+                : ""}
+            </div>
+          </div>
+          <p className="about-me">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque
+            deleniti voluptatum officiis molestiae dolorum quisquam accusamus
+            nihil impedit eveniet reprehenderit, perspiciatis quis eius, dolorem
+            dicta repellat nam doloribus cupiditate qui! Ad cupiditate quia
+            consequatur atque a id nemo asperiores facilis deserunt voluptates.
+            Nostrum assumenda eos harum eaque vero, aperiam quae blanditiis
+            rerum nemo est voluptates sed dolorem necessitatibus. Officia, quam.
+            Dolorem, est deleniti dignissimos et blanditiis totam ducimus dicta
+            omnis in mollitia repellat sapiente! Repellendus quia praesentium
+            esse architecto temporibus accusantium, fugiat, quis quidem, totam
+            nulla consequuntur? Nemo, ad quasi. Cupiditate ad quod deserunt
+            exercitationem, magni sit aperiam tenetur ullam rerum enim. Soluta
+            officiis eius exercitationem voluptate quos aperiam vero, porro
+            enim, quia distinctio corrupti fugit? Inventore, vitae neque! Eius?
+            Atque tempore earum eveniet rem? Blanditiis dignissimos aperiam eos
+            rem magni molestiae vel? Aperiam maiores aliquam facilis, cum
+            architecto voluptates quas nemo saepe non autem quasi officiis amet
+            adipisci accusantium!
+          </p>
+        </div>
       </main>
       <Project
         isActive={isActive}

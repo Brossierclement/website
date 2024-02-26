@@ -20,21 +20,21 @@
       display: flex;
       flex-direction: column;
       gap: 4px;
-      max-width: 350px;
+      max-width: 70%;
       h3 {
-        font-size: clamp(20px, 10.8px + 0.25vw, 14px);
+        font-size: clamp(0.875rem, 0.6964rem + 0.8929vw, 1.5rem);
         font-weight: 400;
       }
       p {
         display: -webkit-box;
-        font-size: clamp(14px, 10.8px + 0.25vw, 14px);
+        font-size: clamp(0.75rem, 0.6429rem + 0.5357vw, 1.125rem);
         overflow: hidden;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
       }
     }
     .show {
-      background: #373b39;
+      background: #3e7949;
       border: none;
       border-radius: 2px;
       color: #eeeeee;
@@ -43,7 +43,7 @@
       padding: 4px 8px;
       transition: 0.2s;
       &:hover {
-        background: #46a758;
+        background: #366740;
       }
     }
   }

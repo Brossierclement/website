@@ -1,14 +1,15 @@
 .link {
-  background: #373b39;
+  background: #3e7949;
   border-radius: 2px;
   padding: 8px;
   text-decoration: none;
   transition: 0.2s;
   &:hover {
-    background: #46a758;
+    background: #366740;
   }
   p {
     color: #eeeeee !important;
     margin: 0;
+    transition: 0.2s;
   }
 }
