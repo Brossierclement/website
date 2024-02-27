@@ -76,24 +76,27 @@ function Home() {
             </div>
           </div>
           <p className="about-me">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque
-            deleniti voluptatum officiis molestiae dolorum quisquam accusamus
-            nihil impedit eveniet reprehenderit, perspiciatis quis eius, dolorem
-            dicta repellat nam doloribus cupiditate qui! Ad cupiditate quia
-            consequatur atque a id nemo asperiores facilis deserunt voluptates.
-            Nostrum assumenda eos harum eaque vero, aperiam quae blanditiis
-            rerum nemo est voluptates sed dolorem necessitatibus. Officia, quam.
-            Dolorem, est deleniti dignissimos et blanditiis totam ducimus dicta
-            omnis in mollitia repellat sapiente! Repellendus quia praesentium
-            esse architecto temporibus accusantium, fugiat, quis quidem, totam
-            nulla consequuntur? Nemo, ad quasi. Cupiditate ad quod deserunt
-            exercitationem, magni sit aperiam tenetur ullam rerum enim. Soluta
-            officiis eius exercitationem voluptate quos aperiam vero, porro
-            enim, quia distinctio corrupti fugit? Inventore, vitae neque! Eius?
-            Atque tempore earum eveniet rem? Blanditiis dignissimos aperiam eos
-            rem magni molestiae vel? Aperiam maiores aliquam facilis, cum
-            architecto voluptates quas nemo saepe non autem quasi officiis amet
-            adipisci accusantium!
+            D'origine de formation agricole, j'ai décidé en janvier 2023 de
+            changer d'horizon et mon choix c'est porté sur le développement web.
+            Après des recherches et entretiens j'ai pu entamer une formation de
+            9 mois a{" "}
+            <a href="https://openclassrooms.com/fr/" target="_blank">
+              Openclassrooms
+            </a>{" "}
+            pour devenir Intégrateur web. Pour ma part se fut compliqué, mais
+            mes efforts finirent pas payer ayant décroché mon diplome le 15
+            décembre 2023.
+            <br />
+            Depuis je cherche un emploi ou bien une alternance pour débuter
+            professionnellement dans le domaine du développement web.
+            <br />
+            <br />
+            En attendant j'améliore mon site internet et réalise des projets
+            personnels dans le but d'améliorer tout les jours mes compétences.
+            <br />
+            <br />
+            Je passe également mon temps libre a jouer aux jeux vidéo, a lire et
+            a écrire des vidéos.
           </p>
         </div>
       </main>

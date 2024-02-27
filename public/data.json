@@ -64,12 +64,12 @@
         {
             "id": 1,
             "tech": ["/images/mdi--javascript.svg", "/images/akar-icons--react-fill.svg"],
-            "named": "Mes capacités :"
+            "named": "Maîtrise :"
         },
         {
             "id": 2,
             "tech": ["/images/icons8-figma.svg"],
-            "named": "Ce que j'apprends :"
+            "named": "Apprends :"
         }
     ]
 }
