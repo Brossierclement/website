@@ -1,6 +1,5 @@
+@import "/src/assets/styles/colors.scss";
 .card {
-  background: rgba(#101211, 0.3);
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   display: grid;
   gap: 12px;
   grid-template-columns: auto 1fr;
@@ -37,7 +36,7 @@
       }
     }
     .show {
-      background: #3e7949;
+      background: $main-color;
       border: none;
       border-radius: 2px;
       color: #eeeeee;
@@ -46,7 +45,7 @@
       padding: 4px 8px;
       transition: 0.2s;
       &:hover {
-        background: #366740;
+        background: $main-color-hover;
       }
     }
   }

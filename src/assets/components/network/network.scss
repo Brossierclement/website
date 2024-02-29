@@ -1,11 +1,12 @@
+@import "/src/assets/styles/colors.scss";
 .link {
-  background: #3e7949;
+  background: $main-color;
   border-radius: 2px;
   padding: 8px;
   text-decoration: none;
   transition: 0.2s;
   &:hover {
-    background: #366740;
+    background: $main-color-hover;
   }
   p {
     color: #eeeeee !important;
