@@ -1,3 +1,4 @@
+@import "/src/assets/styles/colors.scss";
 .project-container {
   background: #202221;
   border: 2px solid #373b39;
@@ -17,7 +18,7 @@
     width: 4px;
   }
   &::-webkit-scrollbar-thumb {
-    background: #46a758;
+    background: $main-color;
     border-radius: 0 10px 0 0;
   }
   .project {
