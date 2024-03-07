@@ -99,6 +99,9 @@ function Home() {
             a écrire des vidéos.
           </p>
         </div>
+        <section className="contact">
+          <h1>Contact me</h1>
+        </section>
       </main>
       <Project
         isActive={isActive}
