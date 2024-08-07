@@ -1,0 +1,13 @@
+@import "../../assets/colors/light.scss";
+.navBtn {
+  background: transparent;
+  border-radius: 4px;
+  display: block;
+  height: 32px;
+  padding: 8px;
+  transition: background 0.2s ease-in;
+  width: 32px;
+  &:hover {
+    background: $hoveredUIElementBackground;
+  }
+}

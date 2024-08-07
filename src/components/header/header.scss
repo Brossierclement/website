@@ -1,0 +1,19 @@
+@import "../../assets/colors/light.scss";
+header {
+  align-items: center;
+  backdrop-filter: blur(2px);
+  background: rgba($background, 0.8);
+  display: flex;
+  height: 64px;
+  justify-content: space-between;
+  left: 0;
+  padding: 0 8px 0 8px;
+  position: fixed;
+  right: 0;
+  z-index: 1;
+  .headerNav {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+  }
+}

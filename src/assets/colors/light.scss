@@ -1,0 +1,11 @@
+$background: #fcfcfc;
+$hoveredUIElementBackground: #f0f0f0;
+$solidBackground: #00a2c7;
+$uiElementBackground: #caf1f6;
+$highContrastText: #1c2024;
+$lowContrastText: #65636d;
+
+$highContrastTextForImages: brightness(0) saturate(100%) invert(6%) sepia(5%)
+  saturate(3049%) hue-rotate(169deg) brightness(91%) contrast(86%);
+$lowContrastTextForImages: brightness(0) saturate(100%) invert(40%) sepia(5%)
+  saturate(641%) hue-rotate(211deg) brightness(94%) contrast(86%);
