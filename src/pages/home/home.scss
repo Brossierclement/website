@@ -78,25 +78,42 @@
     }
   }
   .branch {
-    display: grid;
+    display: flex;
+    gap: 4px;
     grid-auto-rows: var(--step-4);
-    grid-template-columns: repeat(3, 1fr);
     margin: auto;
     max-width: 576px;
     padding: 16px;
     .branchLink {
       align-items: center;
-      display: grid;
-      justify-content: center;
+      border-radius: 2px;
+      display: flex;
+      flex: 1;
       font-size: var(--step-0);
       font-weight: 500;
+      justify-content: center;
+      padding: 8px;
+      position: relative;
       transition: background 0.2s ease-in;
       &:hover {
-        background: $lowContrastText;
+        background: $hoveredUIElementBackground;
+      }
+      &::after {
+        background: $uiElementBackground;
+        bottom: 0;
+        content: "";
+        height: 4px;
+        left: 40px;
+        position: absolute;
+        right: 200px;
+        transition: all 0.2s ease-in;
       }
     }
     .branchLinkUnderline {
-      color: aqua;
+      position: relative;
+      &::after {
+        right: 40px;
+      }
     }
   }
 }

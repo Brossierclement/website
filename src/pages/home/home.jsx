@@ -51,24 +51,24 @@ function Home() {
       </div>
       <nav className="branch">
         <NavLink
-          className={({ isActive, isPending }) =>
-            isPending ? "branchLink" : isActive ? "branchLinkUnderline" : ""
+          className={({ isActive }) =>
+            `branchLink ${isActive ? "branchLinkUnderline" : ""}`
           }
           to={"feed"}
         >
           Actualités
         </NavLink>
         <NavLink
-          className={({ isActive, isPending }) =>
-            isPending ? "branchLink" : isActive ? "branchLinkUnderline" : ""
+          className={({ isActive }) =>
+            `branchLink ${isActive ? "branchLinkUnderline" : ""}`
           }
           to={"about"}
         >
           À propos
         </NavLink>
         <NavLink
-          className={({ isActive, isPending }) =>
-            isPending ? "branchLink" : isActive ? "branchLinkUnderline" : ""
+          className={({ isActive }) =>
+            `branchLink ${isActive ? "branchLinkUnderline" : ""}`
           }
           to={"content"}
         >
