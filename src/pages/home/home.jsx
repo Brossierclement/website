@@ -11,6 +11,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Feed from "../feed/feed";
 import About from "../about/about";
 import Content from "../content/content";
+import Projects from "../projects/projects";
 function Home() {
   return (
     <main className="home">
@@ -74,6 +75,14 @@ function Home() {
         >
           Contenus
         </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            `branchLink ${isActive ? "branchLinkUnderline" : ""}`
+          }
+          to={"projects"}
+        >
+          Projects
+        </NavLink>
       </nav>
       <Routes>
         <Route path="/">
@@ -81,6 +90,7 @@ function Home() {
           <Route path="feed/*" element={<Feed />} />
           <Route path="about" element={<About />} />
           <Route path="content" element={<Content />} />
+          <Route path="projects" element={<Projects />} />
         </Route>
       </Routes>
     </main>

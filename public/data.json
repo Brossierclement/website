@@ -1,0 +1,22 @@
+[
+    {
+        "networks": [
+            {
+                "url": "https://x.com/Gulnyr_",
+                "logo": "../../src/assets/img/twitter.svg"
+            },
+            {
+                "url": "test",
+                "logo": "../../src/assets/img/twitter.svg"
+            },
+            {
+                "url": "test",
+                "logo": "../../src/assets/img/twitter.svg"
+            },
+            {
+                "url": "test",
+                "logo": "../../src/assets/img/twitter.svg"
+            }
+        ]
+    }
+]

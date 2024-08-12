@@ -79,11 +79,10 @@
   }
   .branch {
     display: flex;
-    gap: 4px;
     grid-auto-rows: var(--step-4);
     margin: auto;
     max-width: 576px;
-    padding: 16px;
+    padding: 16px 0;
     .branchLink {
       align-items: center;
       border-radius: 2px;
@@ -94,25 +93,27 @@
       justify-content: center;
       padding: 8px;
       position: relative;
+      text-align: center;
       transition: background 0.2s ease-in;
       &:hover {
-        background: $hoveredUIElementBackground;
+        // background: $hoveredUIElementBackground;
       }
       &::after {
         background: $uiElementBackground;
         bottom: 0;
         content: "";
         height: 4px;
-        left: 40px;
+        left: 20px;
         position: absolute;
         right: 200px;
         transition: all 0.2s ease-in;
       }
     }
     .branchLinkUnderline {
+      background: $hoveredUIElementBackground;
       position: relative;
       &::after {
-        right: 40px;
+        right: 20px;
       }
     }
   }
