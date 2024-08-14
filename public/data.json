@@ -1,21 +1,78 @@
 [
     {
-        "networks": [
+        "id": 1,
+        "type": "networks",
+        "items": [
             {
+                "id": 1,
                 "url": "https://x.com/Gulnyr_",
                 "logo": "../../src/assets/img/twitter.svg"
             },
             {
-                "url": "test",
+                "id": 2,
+                "url": "https://www.instagram.com/clement_brossier/",
+                "logo": "../../src/assets/img/instagram.svg"
+            },
+            {
+                "id": 3,
+                "url": "https://www.twitch.tv/gulnyr_",
+                "logo": "../../src/assets/img/twitch.svg"
+            },
+            {
+                "id": 4,
+                "url": "https://github.com/Brossierclement",
+                "logo": "../../src/assets/img/github.svg"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "type": "projects",
+        "items": [
+            {
+                "id": 1,
+                "name": "projet x",
                 "logo": "../../src/assets/img/twitter.svg"
             },
             {
-                "url": "test",
+                "id": 2,
+                "name": "projet x",
                 "logo": "../../src/assets/img/twitter.svg"
             },
             {
-                "url": "test",
+                "id": 3,
+                "name": "projet x",
                 "logo": "../../src/assets/img/twitter.svg"
+            },
+            {
+                "id": 4,
+                "name": "projet x",
+                "logo": "../../src/assets/img/twitter.svg"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "type": "branchContent",
+        "items": [
+            {
+                "id": 1,
+                "user": "Clément ✨",
+                "date": "14 Août 2024",
+                "statusText": "Bon mood",
+                "statusLogo": "🎋",
+                "title": "Hello World",
+                "primaryText": "This is my site where I try and post about what I'm up to and how to do things with code. You can follow along with RSS by hitting the Follow button up above. Or if you're only interested in stuff I wrote about, check out",
+                "media": "/src/assets/img/banner.jpg"
+            },
+            {
+                "id": 2,
+                "user": "Clément ✨",
+                "date": "9 Août 2024",
+                "statusText": "Heureux",
+                "statusLogo": "🎃",
+                "primaryText": "Create a scrolling gallery effect with only CSS? Couldn't resist 😅",
+                "secondaryText": "Get an intro to CSS scroll-driven animation in this article!"
             }
         ]
     }

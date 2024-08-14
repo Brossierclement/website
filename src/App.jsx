@@ -4,7 +4,9 @@ import Header from "./components/header/header";
 import Home from "./pages/home/home";
 import Stream from "./pages/stream/stream";
 import Footer from "./components/footer/footer";
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
+
+export const DataContext = createContext(null);
 
 function App() {
   const [isLoading, setLoading] = useState(true);
@@ -17,7 +19,6 @@ function App() {
       setData(json);
     } catch (error) {
       console.error(error);
-    } finally {
       setLoading(false);
     }
   };
@@ -25,19 +26,27 @@ function App() {
   useEffect(() => {
     getData();
   }, []);
-  console.log(data);
+
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/">
-          <Route index element={<Navigate to="home" replace />} />
-          <Route path="home/*" element={<Home />} />
-          <Route path="stream" element={<Stream />} />
-        </Route>
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <>
+      {isLoading ? (
+        <DataContext.Provider value={data}>
+          <BrowserRouter>
+            <Header />
+            <Routes>
+              <Route path="/">
+                <Route index element={<Navigate to="home" replace />} />
+                <Route path="home/*" element={<Home />} />
+                <Route path="stream" element={<Stream />} />
+              </Route>
+            </Routes>
+            <Footer data={data} />
+          </BrowserRouter>
+        </DataContext.Provider>
+      ) : (
+        <p>Chargement...</p>
+      )}
+    </>
   );
 }
 

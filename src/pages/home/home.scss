@@ -95,9 +95,6 @@
       position: relative;
       text-align: center;
       transition: background 0.2s ease-in;
-      &:hover {
-        // background: $hoveredUIElementBackground;
-      }
       &::after {
         background: $uiElementBackground;
         bottom: 0;

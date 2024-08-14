@@ -12,7 +12,12 @@ import Feed from "../feed/feed";
 import About from "../about/about";
 import Content from "../content/content";
 import Projects from "../projects/projects";
+import { useContext } from "react";
+import { DataContext } from "../../App";
+
 function Home() {
+  const data = useContext(DataContext);
+
   return (
     <main className="home">
       <img className="banner" src={banner} alt="Bannière du site" />

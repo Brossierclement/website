@@ -1,0 +1,44 @@
+@import "../../assets/colors/light.scss";
+.feed {
+  margin: auto;
+  max-width: 608px;
+  .feedCard {
+    border-radius: 0.5rem;
+    display: flex;
+    gap: 4px;
+    padding: 1rem;
+    &:hover {
+      background: $hoveredUIElementBackground;
+    }
+    .cardProfil {
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      height: 40px;
+      object-fit: cover;
+      width: 40px;
+    }
+    .cardContent {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      width: 100%;
+      .cardUser {
+        display: flex;
+        gap: 8px;
+        :nth-child(1) {
+          font-weight: 700;
+        }
+      }
+      .cardStatus {
+        background: $solidBackground;
+        border-radius: 0.5rem;
+        display: flex;
+      }
+      .cardMedia {
+        aspect-ratio: 3/2;
+        border-radius: 0.5rem;
+        width: 100%;
+      }
+    }
+  }
+}
